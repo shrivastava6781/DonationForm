@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+#main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#page {
+    width: 60vw;
+    height: 70vh;
+    border: 1px solid black;
+    border-radius: 4vw; /* Using vw for border radius */
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to top, #CC95C0, #DBD4B4);
+    padding: 2vw; /* Using vw for padding */
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#page h1 {
+    font-size: 3vw; /* Using vw for font size */
+}
+#page h4 {
+    line-height: 45px;
+    font-size: 1.5vw; /* Using vw for font size */
+    width: 95%;
+    color: rgb(45, 44, 44);
+}
+#page h4 span{
+    color: black;
+    font-weight: 900;
+    font-size: 1.7vw;
+    text-decoration: underline;  
+}
+#page h3 {
+    line-height: 30px;
+    font-size: 1.2vw; /* Using vw for font size */
+    width: 90%;
+}
+.print {
+    margin-top: 1vw; /* Using vw for margin */
+    text-align: center;
+    padding: 0.5vw 2vw; /* Using vw for padding */
+    font-size: 1.5vw; /* Using vw for font size */
+    font-weight: 600;
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border: none;
+    border-radius: 2vw; /* Using vw for border radius */
+}
+.home {
+    margin-top: 1vw; /* Using vw for margin */
+    text-align: center;
+    padding: 0.5vw 2vw; /* Using vw for padding */
+    font-size: 1.5vw; /* Using vw for font size */
+    font-weight: 600;
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border: none;
+    border-radius: 2vw; /* Using vw for border radius */
+}
+@media screen and (max-width: 600px) {
+    #page {
+        width: 95%; /* Adjust width for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+    #page h1 {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+
+    #page h4 {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+    #page h4 span{
+        color: black;
+        font-weight: 900;
+        font-size: 4.4vw;
+        text-decoration: underline;  
+    }
+
+    #page h3 {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+
+    .print {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+}
+@media print {
+    /* Specify styles for printing */
+    #page {
+        width: 700px; /* Set width for printing */
+        height: 500px; /* Set height for printing */
+    }
+    #page h1{
+        margin-top: 10px;
+        font-size: 50px;
+    }
+    #page h4{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #page h4 span{
+        color: black;
+        font-weight: 900;
+        font-size: 30px;
+        text-decoration: underline;  
+    }
+    #page h3{
+        font-size: 15px;
+        line-height: 25px;
+    }
+}

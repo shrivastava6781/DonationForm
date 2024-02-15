@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+}
+
+#page {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#page img {
+    margin: 10px;
+}
+
+#contact {
+    width: 60%;
+    height: 70vh;
+    /* background-color: blue; */
+}
+
+form {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F5EDD4;
+    border-radius: 10px;
+    border: none;
+    padding-bottom: 10px;
+}
+
+/* Radio buttons */
+
+.radio-group {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+}
+
+.radio-div {
+    background-color: rgb(241, 234, 222);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+    width: 200px;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.radio-div:hover {
+    background-color: rgb(218, 214, 214);
+}
+
+.radio-div span {
+    font-size: 30px;
+}
+
+.radio-div p {
+    font-size: 20px;
+}
+
+.radio-num {
+    background-color:  rgb(241, 234, 222);
+    width: 100px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+    padding: 0px;
+    margin-bottom: 3px;
+    box-shadow: none;
+}
+
+.radio-num:focus {
+        outline: none;
+        background-color: #DAD6D6;
+        box-shadow: none;
+}
+
+.radio-div:hover .radio-num {
+    background-color: #DAD6D6; /* Change this to your desired background color */
+}
+
+.radio-div input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.radio-div input[type="number"]::-webkit-inner-spin-button,
+.radio-div input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Main form */
+
+#main-form {
+    /* background-color: blue; */
+    width: 100%;
+    height: inherit;
+    padding: 1vw;
+}
+
+#main-form input {
+    margin-bottom: 14px;
+}
+
+input {
+    padding: 1vh;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+    background-color: white;
+    color: #000000;
+}
+
+input:focus {
+    outline: none;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgb(8, 0, 0);
+}
+
+input::placeholder {
+    background-color: white;
+    color: #495057;
+}
+
+.name {
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name-con {
+    width: 26vw;
+}
+
+textarea {
+    font-size: 26px;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+    padding: 10px;
+    /* background-color: white; */
+}
+
+textarea::placeholder {
+    color: #495057;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 1px 1px 2px rgb(8, 0, 0);
+}
+
+.code {
+    width: 30%;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* CSS Standard */
+}
+
+input[type=number]:hover, 
+input[type=number]:focus {
+    overflow: hidden;
+}
+
+
+/* Add this CSS to your existing stylesheet or create a new one */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: #fff !important;
+}
+
+
+button {
+    font-size: 22px;
+    background-color: rgb(229, 66, 66);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(220, 16, 16);
+    box-shadow: 1px 1px 5px red;
+}
+
+/* Loader spin  */
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+/* You can customize the loader animation here */
+#loader::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Loader animation keyframes */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
